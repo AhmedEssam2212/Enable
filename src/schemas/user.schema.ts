@@ -11,7 +11,7 @@ export class User {
     firstName: string;
     @Prop()
     lastName: string;
-    @Prop()
+    @Prop({ unique: true })
     username: string;
     @Prop()
     email: string;

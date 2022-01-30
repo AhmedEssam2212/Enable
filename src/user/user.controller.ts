@@ -28,7 +28,7 @@ export class UserController {
   @UseGuards(AuthGuard('local'))
   @Post('/login')
   async login(@Request() req) {
-    return this.authService.login(req);
+    return this.authService.login(req.body);
   }
 
   //@Roles(Role.SUPER_ADMIN, Role.DEPARTMENT_MANAGER)
